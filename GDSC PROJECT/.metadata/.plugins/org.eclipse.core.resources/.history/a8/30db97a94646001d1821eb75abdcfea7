@@ -1,0 +1,17 @@
+/*
+ * app_func.h
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+
+#ifndef APP_FUNC_H_
+#define APP_FUNC_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+
+void choose_option();
+
+#endif /* APP_FUNC_H_ */

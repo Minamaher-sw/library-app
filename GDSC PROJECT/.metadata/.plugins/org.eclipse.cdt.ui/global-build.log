@@ -1,0 +1,47 @@
+??:??:?? **** Rebuild of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+In file included from ..\src\app_func.c:7:0:
+..\src\app_func.h:14:31: fatal error: lib_abb/Error_type.h: No such file or directory
+compilation terminated.
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+In file included from ..\src\app_func.c:7:0:
+..\src\app_func.h:14:29: fatal error: lib_abb/Error_type: No such file or directory
+compilation terminated.
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+In file included from ..\src\main.h:11:0,
+                 from ..\src\main.c:8:
+..\src\app_func.h:14:31: fatal error: lib_abb/Error_type.h: No such file or directory
+compilation terminated.
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+In file included from ..\src\main.h:11:0,
+                 from ..\src\main.c:8:
+..\src\app_func.h:15:33: fatal error: lib_abb/Std_type_var.h: No such file or directory
+compilation terminated.
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+..\src\app_func.c:15:6: error: conflicting types for 'choose_option'
+ void choose_option()
+      ^
+In file included from ..\src\app_func.c:7:0:
+..\src\app_func.h:28:12: note: previous declaration of 'choose_option' was here
+ ERROR_TYPE choose_option();
+            ^
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app

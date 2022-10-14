@@ -1,0 +1,32 @@
+/*
+ * app_func.h
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+
+#ifndef APP_FUNC_H_
+#define APP_FUNC_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include"lib_abb/Std_type_var.h"
+#include"lib_abb/Error_type.h"
+
+/**************************** struct node (self_refenetial struct) *****************/
+struct node
+{
+ chun8  book_name[20];
+ chun8  book_author[20];
+ losi32 book_price;
+ struct node *next;
+
+};
+/********************************** Function Prototype ******************************/
+ERROR_TYPE choose_option();
+void add_new_book(chun8*Enter_Book_name,chun8*Enter_author_name,losi32 Enter_Book_Price);
+void view_all_book();
+void delete_book(chun8 book_del_number);
+void view_available_book();
+#endif /* APP_FUNC_H_ */

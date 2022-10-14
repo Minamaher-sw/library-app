@@ -1,0 +1,83 @@
+/*
+ * app_func.c
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+# include "app_func.h"
+
+struct node *head=NULL;
+static shun16 count_book=0;
+void choose_option()
+{
+	printf("\n-----------------------------------------------\n"
+		   "To view all books 			Enter'1' \n"
+		   "To add a new book 			Enter'2' \n"
+		   "To delete a book			Enter'3'\n"
+		   "To view NO of available book		Enter'4'\n"
+		   "To exist the library app 		Enter'5'\n"
+		   "------------------------------------------------\n"
+		   "--------> Your choose is :  ");
+
+}
+void add_new_book(chun8 Enter_Book_name[],chun8 Enter_author_name[],shun16 Enter_Book_Price)
+{
+	/*
+	 * Malloc used to reserve block address in memory
+	 * return to first address in this block stored in (ptr_new_book)
+	 * if not found empty location in memory return null
+	 *
+	 */
+  struct node *ptr_new_book=(struct node*)malloc(sizeof(struct node));
+  assert(ptr_new_book!=NULL);//until project not give error (handle if no location in memory )
+  ptr_new_book->next=head;
+  head=ptr_new_book;
+  int i=0;
+  //to enter book name
+  while(Enter_Book_name[i]!='\0')
+  {
+	  ptr_new_book->book_name[i]=Enter_Book_name[i];
+	  i++;
+  }
+  ptr_new_book->book_name[i]='\0';
+  //To author name
+  int k=0;
+  while(Enter_author_name[k]!='\0')
+   {
+ 	  ptr_new_book->book_author[k]=Enter_author_name[k];
+ 	  k++;
+   }
+   ptr_new_book->book_author[k]='\0';
+
+   //to Enter book price
+   ptr_new_book->book_price=Enter_Book_Price;
+
+   count_book++;
+
+}
+
+void view_all_book()
+{
+
+	if(head==NULL)
+	{
+		printf("the library is empty. no book To view ! ");
+	}
+	else
+	{
+		struct node* ptr_view;
+		ptr_view=head;
+		printf("Book Number : %hu",count_book);
+		while(ptr_view!=NULL)
+		{
+			printf("Book name :%s \n",ptr_view->book_name[20]);
+			printf("Book author :%s \n",ptr_view->book_author[20]);
+			printf("Book price :%hu \n",ptr_view->book_price);
+			ptr_view=ptr_view->next;
+
+		}
+
+	}
+
+
+}

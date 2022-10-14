@@ -1,0 +1,173 @@
+/*
+ * app_func.c
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+# include "app_func.h"
+
+struct node *head=NULL;
+static shun16 count_book=0;
+
+/***************************************************************************/
+                 /********* Display option ***********/
+void choose_option()
+{
+	printf("\n-----------------------------------------------\n"
+		   "To view all books 			Enter'1' \n"
+		   "To add a new book 			Enter'2' \n"
+		   "To delete a book			Enter'3'\n"
+		   "To view NO of available book		Enter'4'\n"
+		   "To exist the library app 		Enter'5'\n"
+		   "------------------------------------------------\n"
+		   "--------> Your choose is :  ");
+
+}
+
+/***************************************************************************/
+                  /******** add new book ************/
+void add_new_book(chun8 Enter_Book_name[],chun8 Enter_author_name[],shun16 Enter_Book_Price)
+{
+	/*
+	 * Malloc used to reserve block address in memory
+	 * return to first address in this block stored in (ptr_new_book)
+	 * if not found empty location in memory return null
+	 *
+	 */
+  struct node *ptr_new_book=(struct node*)malloc(sizeof(struct node));
+  assert(ptr_new_book!=NULL);//until project not give error (handle if no location in memory )
+  ptr_new_book->next=head;
+  head=ptr_new_book;
+  /*
+   * To author name
+   * loop to store string
+   *
+   */
+   int author_index=0;
+   while(Enter_author_name[author_index]!='\0')
+    {
+  	  ptr_new_book->book_author[author_index]=Enter_author_name[];
+  	  k++;
+    }
+    ptr_new_book->book_author[k]='\0';
+
+  //to enter book name
+    int i=0;
+  while(Enter_Book_name[i]!='\0')
+  {
+
+	  ptr_new_book->book_name[i]=Enter_Book_name[i];
+	  printf("%c",  ptr_new_book->book_name[i]);
+	  i++;
+  }
+  ptr_new_book->book_name[i]='\0';
+
+
+   //to Enter book price
+   ptr_new_book->book_price=Enter_Book_Price;
+
+   count_book++;
+
+}
+
+/*****************************************************************************/
+
+void view_all_book()
+{
+
+	if(head==NULL)
+	{
+		printf("--------------------------------------\n");
+		printf("the library is empty. no book To view ! ");
+		printf("--------------------------------------\n");
+	}
+	else
+	{
+		struct node* ptr_view;
+		ptr_view=head;
+		printf("--------------------------------------\n");
+		printf("Book Number : %hu \n",count_book);
+		while(ptr_view!=NULL)
+		{
+			printf("--------------------------------------\n");
+		    printf("Book name   : %s \n",ptr_view->book_name);
+			printf("Book author : %s \n",ptr_view->book_author);
+			printf("Book price  : %hu \n",ptr_view->book_price);
+			printf("--------------------------------------\n");
+			ptr_view=ptr_view->next;
+
+		}
+
+	}
+
+
+}
+
+/*****************************************************************************/
+
+void delete_book(chun8 book_del_number)
+{
+
+	struct node *prev;
+	struct node *current;
+	if(count_book==1)
+	{
+		// there are one node
+		free(head);
+		count_book--;
+		printf("--------------------------------------\n");
+		printf(" Book delete successfully ! \n ");
+		printf("--------------------------------------\n");
+	}
+	else if(count_book==book_del_number)
+	{
+		struct node*del=head;
+		head=head->next;
+		free(del);
+		count_book--;
+		printf("--------------------------------------\n");
+		printf(" Book delete successfully ! \n ");
+		printf("--------------------------------------\n");
+	}
+	else if(book_del_number==1)
+	{
+		current=head;
+		while(current->next!=NULL)
+		{
+			prev=current;
+			current=current->next;
+		}
+		prev->next=NULL;
+		free(current);
+		count_book--;
+		printf("--------------------------------------\n");
+		printf(" Book delete successfully ! \n ");
+		printf("--------------------------------------\n");
+	}
+	else
+	{
+	 for(int i=0 ; i<(count_book-book_del_number) ; i++)
+	 {
+		 prev=head;
+		 head=head->next;
+		 current=head;
+	 }
+	 prev->next=current->next;
+	 free(current);
+	 count_book--;
+	 printf("--------------------------------------\n");
+	 printf(" Book delete successfully ! \n ");
+	 printf("--------------------------------------\n");
+	}
+
+}
+
+/********************************************************************************/
+
+void view_available_book()
+{
+	printf("--------------------------------------\n");
+	printf("Number of available book is %hu \n",count_book);
+	printf("--------------------------------------\n");
+
+}

@@ -1,0 +1,24 @@
+/*
+ * app_func.h
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+
+#ifndef APP_FUNC_H_
+#define APP_FUNC_H_
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <assert.h>
+#include"Std_type_var.h"
+struct node
+{
+ chun8 book_name[20];
+ chun8 book_author[20];
+ shun16 book_price;
+
+};
+void choose_option();
+
+#endif /* APP_FUNC_H_ */

@@ -1,0 +1,13 @@
+/*
+ * main.c
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+#include"app_func.h"
+
+//HEAD IS START OF Linked List 
+struct node *head=NULL;
+
+
+
