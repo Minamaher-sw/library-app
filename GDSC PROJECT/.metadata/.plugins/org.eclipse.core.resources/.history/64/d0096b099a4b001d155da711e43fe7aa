@@ -21,7 +21,6 @@ void choose_option()
 		   "To view NO of available book		Enter'4'\n"
 		   "To exist the library app 		Enter'5'\n"
 		   "------------------------------------------------\n"
-		   "-------------> your choice is : "
 		   );
 
 

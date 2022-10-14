@@ -45,3 +45,15 @@ collect2.exe: error: ld returned 1 exit status
 Info: Internal Builder is used for build
 gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
 Info: Nothing to build for Library_app
+??:??:?? **** Rebuild of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+Info: Nothing to build for Library_app

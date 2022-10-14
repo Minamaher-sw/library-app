@@ -25,9 +25,9 @@ struct node
 
 };
 /********************************** Function Prototype ******************************/
-void choose_option();
+ERROR_TYPE choose_option();
 ERROR_TYPE add_new_book(chun8*Enter_Book_name,chun8*Enter_author_name,losi32 Enter_Book_Price);
-void view_all_book();
+ERROR_TYPE view_all_book();
 ERROR_TYPE delete_book(chun8 book_del_number);
 ERROR_TYPE view_available_book();
 #endif /* APP_FUNC_H_ */

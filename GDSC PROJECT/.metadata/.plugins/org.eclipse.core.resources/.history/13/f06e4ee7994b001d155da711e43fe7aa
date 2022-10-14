@@ -74,7 +74,7 @@ int main()
 
 		 }
 		 //call function to great new node and store new book
-		 add_new_book(book_name_user,book_author_user,book_price_user)==lib_RT_OK?printf("book is added"):printf("book is not added");
+		 add_new_book(book_name_user,book_author_user,book_price_user);
 		 //a new book is added
 		 count++;
 		 //to display option
@@ -96,7 +96,7 @@ int main()
 		 * else condition until user enter number out of range
 		 */
 		if(count>=book_num_delete)
-		  delete_book(book_num_delete)==lib_RT_OK?printf("-------------------------------------\n" "BOOK is Deleted \n""-----------------------------"):printf("book is not deleted");
+		  delete_book(book_num_delete);
 		else
 		{   while(count<book_num_delete)
 		    {
@@ -126,9 +126,7 @@ int main()
 		break;
 	case 4 :
 		//to view number of available book
-		printf("--------------------------------- \n ");
-		view_available_book()==lib_RT_OK?printf("Number of available book is %hu \n",count):printf("sorry no book available \n ");
-		printf("--------------------------------- \n");
+		view_available_book();
 		//to display option
 		choose_option();
 	    break;
