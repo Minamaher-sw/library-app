@@ -1,40 +1,7 @@
+??:??:?? **** Clean-only build of configuration Debug for project Library_app ****
+rm -rf src/main.o Library_app.exe src/app_func.d src/main.d src/app_func.o 
+rm: cannot remove `Library_app.exe': Permission denied
 ??:??:?? **** Rebuild of configuration Debug for project Library_app ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
-In file included from ..\src\app_func.c:7:0:
-..\src\app_func.h:14:31: fatal error: lib_abb/Error_type.h: No such file or directory
-compilation terminated.
-??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
-In file included from ..\src\app_func.c:7:0:
-..\src\app_func.h:14:29: fatal error: lib_abb/Error_type: No such file or directory
-compilation terminated.
-??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-In file included from ..\src\main.h:11:0,
-                 from ..\src\main.c:8:
-..\src\app_func.h:14:31: fatal error: lib_abb/Error_type.h: No such file or directory
-compilation terminated.
-??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-In file included from ..\src\main.h:11:0,
-                 from ..\src\main.c:8:
-..\src\app_func.h:15:33: fatal error: lib_abb/Std_type_var.h: No such file or directory
-compilation terminated.
-??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
-Info: Internal Builder is used for build
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
-..\src\app_func.c:15:6: error: conflicting types for 'choose_option'
- void choose_option()
-      ^
-In file included from ..\src\app_func.c:7:0:
-..\src\app_func.h:28:12: note: previous declaration of 'choose_option' was here
- ERROR_TYPE choose_option();
-            ^
-??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
@@ -44,16 +11,433 @@ collect2.exe: error: ld returned 1 exit status
 ??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
 Info: Internal Builder is used for build
 gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
-Info: Nothing to build for Library_app
-??:??:?? **** Rebuild of configuration Debug for project Library_app ****
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
-gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
 Info: Nothing to build for Library_app
 ??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
 Info: Internal Builder is used for build
 gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+..\src\app_func.c: In function 'choose_number':
+..\src\app_func.c:200:8: warning: format '%hu' expects argument of type 'short unsigned int *', but argument 2 has type 'ERROR_TYPE (*)() {aka enum <anonymous> (*)()}' [-Wformat=]
+  scanf("%hu",&choose_number);
+        ^
+..\src\app_func.c:201:19: warning: the comparison will always evaluate as 'false' for the address of 'choose_number' will never be NULL [-Waddress]
+  if (choose_number==0)
+                   ^
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:6: error: called object 'choose_number' is not a function or function pointer
+  if( choose_number()==lib_RT_OK)
+      ^
+..\src\main.c:25:10: note: declared here
+  shun16  choose_number;
+          ^
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:6: error: called object 'choose_number' is not a function or function pointer
+  if( choose_number()==lib_RT_OK)
+      ^
+..\src\main.c:25:10: note: declared here
+  shun16  choose_number;
+          ^
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:44:9: error: switch quantity not an integer
+  switch(choose_number)
+         ^
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:34:6: error: too few arguments to function 'choose_number_fun'
+  if( choose_number_fun()==lib_RT_OK)
+      ^
+In file included from ..\src\main.h:11:0,
+                 from ..\src\main.c:8:
+..\src\app_func.h:33:12: note: declared here
+ ERROR_TYPE choose_number_fun(shun16 choose_number);
+            ^
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\app_func.o" "..\\src\\app_func.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
 gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
 Info: Nothing to build for Library_app
 Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'chun8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d",&choose_number);
+        ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'chun8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d",&choose_number);
+        ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:26:9: warning: variable 'cast_number' set but not used [-Wunused-but-set-variable]
+  shun16 cast_number;
+         ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'chun8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d",&choose_number);
+        ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'chun8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d",&choose_number);
+        ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+Info: Nothing to build for Library_app
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'chun8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d",&choose_number);
+        ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:33:8: warning: format '%d' expects argument of type 'int *', but argument 2 has type 'chun8 * {aka unsigned char *}' [-Wformat=]
+  scanf("%d",&choose_number);
+        ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:35:11: warning: format '%c' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+     scanf("%c",temp);
+           ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:34:9: warning: format '%c' expects argument of type 'char *', but argument 2 has type 'int' [-Wformat=]
+   scanf("%c",temp);
+         ^
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+C:/TDM-GCC-64/bin/../lib/gcc/x86_64-w64-mingw32/5.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot open output file Library_app.exe: Permission denied
+collect2.exe: error: ld returned 1 exit status
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+..\src\main.c: In function 'main':
+..\src\main.c:35:8: warning: unknown conversion type character 0x20 in format [-Wformat=]
+  scanf(" % hu",&choose_number);
+        ^
+..\src\main.c:35:8: warning: too many arguments for format [-Wformat-extra-args]
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+Info: Nothing to build for Library_app
+Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 

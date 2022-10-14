@@ -22,7 +22,7 @@ int main()
 	//to display option at first
 	choose_option();
 	//Enter from user
-	chun8  choose_number;
+	shun16  choose_number;
 	char temp;//used to clear buffer
 	chun8  book_name_user  [100];
 	chun8  book_author_user[100];
@@ -30,7 +30,9 @@ int main()
   while(1)
   {
 	//to enter choose number
-	scanf("%c",&choose_number);
+	scanf("%hu",&choose_number);
+	//until free scanf buffer
+	scanf("%c",&temp);
 	/*
 	 * switch
 	 *
@@ -136,8 +138,8 @@ int main()
 		exit(1);//built function
 		break;
 	default :
-		 printf("---------------------------------------------\n"
-				 "Error number : please enter number from 1 to 5 \n"
+		 printf("\n---------------------------------------------\n"
+				 "sorry wrong option : please enter number from 1 to 5 \n"
 				 "-------------------------------------------- ");
 		 choose_option();
 		 break;

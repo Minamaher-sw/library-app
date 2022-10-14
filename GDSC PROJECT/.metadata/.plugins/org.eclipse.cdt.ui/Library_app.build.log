@@ -1,1 +1,7 @@
-Info: Nothing to build for Library_app
+??:??:?? **** Incremental Build of configuration Debug for project Library_app ****
+Info: Internal Builder is used for build
+gcc -O0 -g3 -Wall -c -fmessage-length=0 -o "src\\main.o" "..\\src\\main.c" 
+gcc -o Library_app.exe "src\\app_func.o" "src\\main.o" 
+
+??:??:?? Build Finished. 0 errors, 0 warnings. (took 347ms)
+

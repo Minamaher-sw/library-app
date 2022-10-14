@@ -1,0 +1,148 @@
+/*
+ * main.c
+ *
+ *  Created on: ٠٧‏/١٠‏/٢٠٢٢
+ *      Author: DELL
+ */
+
+#include"main.h"
+
+//Head Is Start Of Linked list
+int main()
+{
+	setbuf(stdout,NULL);
+	//used to count new book is added
+	chun8 count=0;
+	//to receive del_book_number
+	shun16 book_num_delete;
+	//header file
+	printf("/---------------------------------------------------------\n"
+			"---------------       library app         ---------------\n "
+			"---------------------------------------------------------/\n");
+	//to display option at first
+	choose_option();
+	//Enter from user
+	chun8  choose_number;
+	char temp;//used to clear buffer
+	chun8  book_name_user  [100];
+	chun8  book_author_user[100];
+	losi32 book_price_user;
+  while(1)
+  {
+	//to enter choose number
+	scanf("%c",&choose_number);
+     if(choose_number==49)
+    	 break;
+	/*
+	 * switch
+	 *
+	 * 1  ->   view_all_book
+	 * 2  ->   add_new_book
+	 * 3  ->   delete_book
+	 * 4  ->   view_available_book
+	 * 5  ->   exit from project
+	 */
+	switch(choose_number)
+	{
+	case '1' :
+		//to display all enter books
+		 view_all_book();
+		//to display option
+		 choose_option();
+		break;
+	case 2 :
+		 printf("Enter the name of book : ");
+		 scanf("%c",&temp);// temp statement to clear buffer
+		 scanf("%[^\n]",book_name_user);
+		 printf("\nEnter the author of book : ");
+		 scanf("%c",&temp);// temp statement to clear buffer
+		 scanf("%[^\n]",book_author_user);
+		 printf("\nEnter the price of book : ");
+		 scanf("%ld",&book_price_user);
+		 while(1)
+		 {
+			 if(book_price_user<0)//65535 is 2^16
+			 {
+				 printf("-----------------------------------\n"
+						 "the book  price is not correct !");
+				 printf("\nEnter the price of book : ");
+				 scanf("%ld",&book_price_user);
+
+			 }
+			 else
+			 {
+				 break;
+			 }
+
+		 }
+		 //call function to great new node and store new book
+		 add_new_book(book_name_user,book_author_user,book_price_user)==lib_RT_OK?printf("book is added"):printf("book is not added");
+		 //a new book is added
+		 count++;
+		 //to display option
+		 choose_option();
+		break;
+	case 3 :
+		//to tell user with range of book that want to del
+		if(count>0)
+		{
+		printf("Enter the number of the book that want delete :from ( 1 to %hu ) :",count);
+	    //to enter book_num_delete
+		scanf("%hu",&book_num_delete);
+		//to check if book_num_delete is found
+		if(book_num_delete>=1&&book_num_delete<=count)
+		{
+		/*
+		 * first  condition to check that enter number less count_book
+		 * second condition to send for user that linked list is empty
+		 * else condition until user enter number out of range
+		 */
+		if(count>=book_num_delete)
+		  delete_book(book_num_delete)==lib_RT_OK?printf("-------------------------------------\n" "BOOK is Deleted \n""-----------------------------"):printf("book is not deleted");
+		else
+		{   while(count<book_num_delete)
+		    {
+			  printf("Enter the number of the book that want delete :from ( 1 to %hu ) :",count);
+			  scanf("%hu",&book_num_delete);
+		    }
+		}
+		//to display option
+		choose_option();
+		// to tell user that one book is deleted
+		count--;}
+		else
+		{
+			printf("-------------------------------------\n"
+					"please enter number from 1 to  %hu :",count);
+			choose_option();
+		}
+
+		}
+		else
+		{  //if user deleted but no element in library
+			printf("------------------------------------------------\n"
+					"sorry Library is empty : and there is no book to deleted\n"
+					"------------------------------------------------");
+			choose_option();
+		}
+		break;
+	case 4 :
+		//to view number of available book
+		printf("--------------------------------- \n ");
+		view_available_book()==lib_RT_OK?printf("Number of available book is %hu \n",count):printf("sorry no book available \n ");
+		printf("--------------------------------- \n");
+		//to display option
+		choose_option();
+	    break;
+	case 5 :
+		exit(1);//built function
+		break;
+	default :
+		 printf("\n---------------------------------------------\n"
+				 "sorry wrong option : please enter number from 1 to 5 \n"
+				 "-------------------------------------------- ");
+		 choose_option();
+		 break;
+	}
+  }
+}

@@ -626,3 +626,12 @@ user global configuration and to define the default location to store repositori
 not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
 EGit might behave differently since they see different configuration options.
 This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.equinox.p2.metadata.repository 4 1000 2022-10-14 10:49:56.580
+!MESSAGE No repository found at jar:file:/D:/dow/New%20folder/avr-gcc-12.1.0-x64-windows.zip!/.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-10-14 10:50:48.386
+!MESSAGE Using unsafe http transport to retrieve http://avr-eclipse.sourceforge.net/updatesite, see CVE-2021-41033. Consider using https instead.
+
+!ENTRY org.eclipse.equinox.p2.repository 2 0 2022-10-14 10:52:23.303
+!MESSAGE Using unsafe http transport to retrieve http://avr-eclipse.sourceforge.net/updatesite, see CVE-2021-41033. Consider using https instead.
